@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="bg-olive-50 text-black px-8 py-3 shadow-md">
+    <nav className="bg-orange-100 text-black px-8 py-3 shadow-md">
       
       <div className="flex items-center justify-between">
         
@@ -22,7 +22,7 @@ export default function Navbar() {
          
         </div>
 
-        <ul className="flex gap-8 absolute left-[58%] transform-translate-x-1/2 py-1 font-medium ">
+        <ul className="flex gap-8 absolute left-[58%] transform-translate-x-1/2 py-1 font-medium  ">
           
           <li>
             <Link href="/" className="hover:text-orange-500">

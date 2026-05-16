@@ -1,6 +1,7 @@
 
 import Navbar from "@/components/Navbar";
 import LatestRecipe from "@/components/LatestRecipe";
+import Footer from "@/components/Footer";
 import Image from "next/image";
 
 
@@ -12,46 +13,68 @@ export default function Home() {
       <Navbar/>
 
       
-      <div className="min-h-screen flex items-center justify-center bg-orange-50 px-6">
-      
-      <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-10">
-        
-        <div className="w-full md:w-1/2">
-          <Image
-            src="/heroimage.jpeg"
-            alt="Delicious Food"
-            width={400}
-            height={400}
-            className="rounded-2xl shadow-lg"
-          />
-        </div>
+     <div className="min-h-screen bg-orange-50  flex items-center justify-center px-6 py-16">
 
-        
-        <div className="w-full md:w-1/2 text-center md:text-left">
-          
-          <h1 className="text-4xl font-bold text-orange-600 italic">
-            Welcome to Yummy Bowl 🍲
-          </h1>
+  <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 items-center gap-16">
 
-          <p className="mt-4 text-gray-700 text-lg">
-            Discover delicious homemade recipes from around the world.
-            Cook easy, tasty, and healthy meals step by step.
-          </p>
+    <div>
 
-          <p className="mt-3 text-gray-500">
-            Start your cooking journey today and enjoy every bite! 👨‍🍳✨
-          </p>
+      <p className="text-orange-500 font-semibold text-lg uppercase tracking-widest italic">
+        Welcome to Yummy Bowl
+      </p>
 
-          <button  className="mt-6 bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600">
-            Explore Recipes
-          </button>
+      <h1 className="mt-4 text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+        Discover Delicious
+        <span className="text-orange-500"> Homemade Recipes </span>
+        Everyday 🍲
+      </h1>
 
-        </div>
+      <p className="mt-8 text-gray-600 text-lg leading-9 max-w-xl">
+        Explore tasty homemade recipes from around the world.
+        Learn easy cooking methods, discover new flavors, and
+        make every meal special with Yummy Bowl.
+      </p>
+
+      <div className="mt-10 flex flex-wrap gap-5">
+
+        <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full shadow-lg transition duration-300">
+          Explore Recipes
+        </button>
+
+       
 
       </div>
+
+      
+
     </div>
 
+   
+    <div className="flex justify-center">
+
+      <div className="relative">
+
+        
+        <div className="absolute inset-0 bg-orange-300 rounded-full blur-3xl opacity-30"></div>
+
+        <Image
+          src="/heroimage.jpeg"
+          alt=""
+          width={500}
+          height={400}
+          className="relative rounded-[40px] shadow-2xl object-cover border-8 border-white"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
     <LatestRecipe/>
+    <Footer/>
     </>
   );
 }

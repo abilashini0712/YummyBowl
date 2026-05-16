@@ -9,7 +9,7 @@ export default function LatestRecipe() {
     {
       id: 1,
       title: "Chicken Biryani",
-      image: "/images/biriani.jpeg",
+      image: "/biriyani.jpeg",
       description:
         "Delicious spicy chicken biryani made with basmati rice and traditional spices.",
     },
@@ -17,7 +17,7 @@ export default function LatestRecipe() {
     {
       id: 2,
       title: "Fish Curry",
-      image: "/images/fish.jpeg",
+      image: "/fish.jpeg",
       description:
         "Rich and flavorful fish curry cooked with coconut milk and spices.",
     },
@@ -25,7 +25,7 @@ export default function LatestRecipe() {
     {
       id: 3,
       title: "Fried Rice",
-      image: "/images/rice.jpeg",
+      image: "/rice.jpeg",
       description:
         "Tasty fried rice mixed with vegetables, egg, and delicious sauces.",
     },
@@ -46,36 +46,59 @@ export default function LatestRecipe() {
   }, []);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-orange-50 p-6">
 
-      <div className="flex flex-col md:flex-row items-center gap-8">
-
-        
-        <div className="shadow-[0_0_20px_orange] rounded-xl overflow-hidden">
-          <Image
-            src={recipes[currentRecipe].image}
-            alt={recipes[currentRecipe].title}
-            width={300}
-            height={450}
-            className="object-cover"
-          />
-        </div>
+    <div className="bg-orange-50 py-20 px-6">
 
       
-        <div className="border border-orange-500 p-8 max-w-xl bg-zinc-900 shadow-[0_0_15px_orange]">
+      <div className="text-center mb-14">
 
-          <h1 className="text-4xl font-bold text-white mb-6">
-            {recipes[currentRecipe].title}
-          </h1>
+        <h1 className="text-5xl font-bold text-orange-500 italic">
+          Latest Recipes 🍲
+        </h1>
 
-          <p className="text-gray-300 text-lg leading-8">
-            {recipes[currentRecipe].description}
-          </p>
+        <p className="mt-4 text-gray-600 text-lg">
+          Fresh and delicious recipes made with love
+        </p>
 
-          <div className="mt-8 border border-orange-500 p-4">
-            <p className="text-white font-semibold">
-              Latest Recipe on Yummy Bowl 🍲
+      </div>
+
+      
+      <div className="max-w-5xl mx-auto bg-white rounded-[40px] shadow-xl overflow-hidden">
+
+        <div className="flex flex-col md:flex-row items-center">
+
+          
+          <div className="w-full md:w-1/2">
+
+            <Image
+              src={recipes[currentRecipe].image}
+              alt={recipes[currentRecipe].title}
+              width={500}
+              height={500}
+              className="w-full h-[400px] object-cover"
+            />
+
+          </div>
+
+          
+          <div className="w-full md:w-1/2 p-10">
+
+            <span className="bg-orange-100 text-orange-500 px-4 py-2 rounded-full text-sm font-semibold">
+              Featured Recipe
+            </span>
+
+            <h2 className="mt-6 text-4xl font-bold text-gray-800">
+              {recipes[currentRecipe].title}
+            </h2>
+
+            <p className="mt-6 text-gray-600 text-lg leading-8">
+              {recipes[currentRecipe].description}
             </p>
+
+            <button className="mt-8 bg-orange-500 hover:bg-orange-600 text-white px-7 py-3 rounded-full transition duration-300">
+              View Recipe
+            </button>
+
           </div>
 
         </div>
@@ -83,5 +106,6 @@ export default function LatestRecipe() {
       </div>
 
     </div>
+
   );
 }
